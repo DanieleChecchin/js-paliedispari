@@ -10,39 +10,20 @@ function isPalindrome(word) {
     // Creo una variabile che contenga la risposta finale
     let answer = '';
 
+    // Creo un ciclo for per ciclare in ogni lettera della parola inserita dall'utente
     for (let i = 0; i < word.length; i++) {
-        // Ciclo su ogni lettera
-        const letterWord = word[i];
 
-        // Creo un if
-
-
-
+        // Creo un if per comparare le lettere
+        if (word.charAt(0) === word.charAt(word.length -1)){
+            answer = `La parola ${word} è palindroma`
+        } else{
+            answer = `La parola ${word} non è palindroma`
+        }
     }
-
     // Preparo la risposta
     return answer;
 }
-
+ // Stampo la risposta fuori dalla funzione
 console.log(isPalindrome(word))
 
 
-/*
-PARI e DISPARI
-L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).
-Sommiamo i due numeri
-Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
-Dichiariamo chi ha vinto.
-*/
-
-// FASE DI RACCOLTA DATI
-let usereChoice = promp('Scegli pari o dispari');
-let userNumber = prompt('Scegli un numero da 1 a 5');
-
-// Creo una funzione per generare un numero random da 1 a 5 per il pc
-function getRandomNumber(){
-    return Math.floor(Math.random() * 5) + 1;
-}
-const randomNumber = getRandomNumber;
-console.log(randomNumber)
