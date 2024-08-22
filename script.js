@@ -8,13 +8,23 @@ let word = prompt('Inserisci una parola');
 // Creo una funzione
 function isPalindrome(word) {
     // Creo una variabile che contenga la risposta finale
-    let answer = word.chartAt(0) === word.chartAt(word.lenght - 1) ? 'La parola è Palindroma' : 'La parola non è Palindroma';
-    console.log(word + answer)
-    // Preparo la risposta che riceverò
+    let answer = '';
+
+    for (let i = 0; i < word.length; i++) {
+        // Ciclo su ogni lettera
+        const letterWord = word[i];
+
+        // Creo un if
+
+
+
+    }
+
+    // Preparo la risposta
     return answer;
 }
 
-console.log(isPalindrome('Ciao'))
+console.log(isPalindrome(word))
 
 
 /*
@@ -25,3 +35,14 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
 Dichiariamo chi ha vinto.
 */
+
+// FASE DI RACCOLTA DATI
+let usereChoice = promp('Scegli pari o dispari');
+let userNumber = prompt('Scegli un numero da 1 a 5');
+
+// Creo una funzione per generare un numero random da 1 a 5 per il pc
+function getRandomNumber(){
+    return Math.floor(Math.random() * 5) + 1;
+}
+const randomNumber = getRandomNumber;
+console.log(randomNumber)
